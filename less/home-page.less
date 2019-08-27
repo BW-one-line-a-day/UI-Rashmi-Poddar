@@ -1,31 +1,71 @@
-.mainContent {
-  padding: 20px;
+.bodyDiv {
   
-
-  img {
-    width: 40%;
-    height: 40vh;
-    // object-fit:cover;
-    // object-position:50% 50%;
+  .mainContent { 
+    padding: 2%;
+    margin: 0 2%;
+    background-color: @secondary-color;
+    .custom-layout(row, space-between);
+    
+    div {
+      width: 40%;
+    }
+  
+    img {
+      width: 50%;
+      height: 40vh;
+      object-fit:cover;
+      object-position:10% 10%;
+    }
     
   }
-
-  p {
-    width: 40%;
+  
+  .inverseContent {
+    .custom-layout(row-reverse, space-between);
   }
 
-  .firstPara {
-    .custom-layout(row);
-    padding: 2% 0;
+  .snapshots {
+    padding: 2%;
+    margin: 0 2%;
+    .custom-layout(row, space-between);
+    // background-color: @main-color;
+
+    img {
+      width: 40%;
+      max-width: 100%;
+      // height: 40vh;
+      // object-fit:cover;
+      // object-position:10% 10%;
+    }
   }
 
-  .secondPara {
-    .custom-layout(row-reverse);
-    padding: 2% 0;
-  }
-
-  .thirdPara {
-    .custom-layout(row);
-    padding: 2% 0;
-  }
 }
+
+.team {
+  padding-top: 2%;
+  text-align: center;
+}
+
+.aboutTeam {
+  padding: 2%;
+  margin: 0 2%;
+  .custom-layout(row, space-between);
+  flex-wrap: wrap;
+  text-align: center;
+  div {
+    padding: 2%;
+    margin: 0 2%;
+    width: 45%;
+    &:first-child {
+      width: 100%;
+    }
+    img {
+      margin: 2% 0;
+      width: 30%;
+      
+    }
+    
+  }
+  
+}
+
+

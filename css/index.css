@@ -144,20 +144,21 @@ h5 {
   font-family: 'Satisfy', cursive;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 5.6rem;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   padding-bottom: 10px;
 }
-h4 {
-  font-size: 2.5rem;
+h3 {
+  font-size: 2.4rem;
   padding-bottom: 10px;
 }
 p {
   line-height: 1.5;
-  font-size: 1.6rem;
+  font-size: 2rem;
   padding-bottom: 10px;
+  font-family: 'Lato', sans-serif;
 }
 img {
   max-width: 100%;
@@ -169,47 +170,87 @@ img {
   margin: 0 auto;
 }
 .header {
-  height: 30vh;
-  background-color: teal;
+  height: 50vh;
+  background-color: #0098b8;
   text-align: center;
-  padding: 20px;
-  margin: 20px;
-  color: seashell;
+  padding: 2%;
+  margin: 0 2%;
 }
 .header h1 {
-  padding: 20px;
+  padding: 2%;
 }
-.header i {
-  font-size: 5rem;
+.header img {
+  margin: 1% 0;
 }
-.header button {
-  font-size: 2rem;
-  padding: 8px;
-  font-family: 'Satisfy', cursive;
-  background-color: purple;
+.header div {
+  text-align: center;
+  border-right: 1px solid white;
 }
-.mainContent {
-  padding: 20px;
-}
-.mainContent img {
-  width: 40%;
-  height: 40vh;
-}
-.mainContent p {
-  width: 40%;
-}
-.mainContent .firstPara {
+.bodyDiv .mainContent {
+  padding: 2%;
+  margin: 0 2%;
+  background-color: #BFE6EC;
   display: flex;
   flex-direction: row;
-  padding: 2% 0;
+  justify-content: space-between;
 }
-.mainContent .secondPara {
+.bodyDiv .mainContent div {
+  width: 40%;
+}
+.bodyDiv .mainContent img {
+  width: 50%;
+  height: 40vh;
+  object-fit: cover;
+  object-position: 10% 10%;
+}
+.bodyDiv .inverseContent {
   display: flex;
   flex-direction: row-reverse;
-  padding: 2% 0;
+  justify-content: space-between;
 }
-.mainContent .thirdPara {
+.bodyDiv .snapshots {
+  padding: 2%;
+  margin: 0 2%;
   display: flex;
   flex-direction: row;
-  padding: 2% 0;
+  justify-content: space-between;
+}
+.bodyDiv .snapshots img {
+  width: 40%;
+  max-width: 100%;
+}
+.team {
+  padding-top: 2%;
+  text-align: center;
+}
+.aboutTeam {
+  padding: 2%;
+  margin: 0 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.aboutTeam div {
+  padding: 2%;
+  margin: 0 2%;
+  width: 45%;
+}
+.aboutTeam div:first-child {
+  width: 100%;
+}
+.aboutTeam div img {
+  margin: 2% 0;
+  width: 30%;
+}
+.footer {
+  padding: 2%;
+  margin: 0 2%;
+  text-align: center;
+  background-color: #BFE6EC;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
 }

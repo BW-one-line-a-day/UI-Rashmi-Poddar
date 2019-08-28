@@ -19,7 +19,7 @@
     img {
       width: 50%;
       height: 40vh;
-      object-fit:cover;
+      object-fit: cover;
       object-position:10% 10%;
       @media @mobile {
         width: 100%;
@@ -41,15 +41,37 @@
     margin: 0 2%;
     .custom-layout(row, center);
     flex-wrap: wrap;
-    // background-color: @main-color;
+    background-color: @main-color;
 
     img {
-      height: 40vh;
+      height: 50vh;
       width: auto;
       max-width: 100%;
     }
   }
 
+  .download {
+    .custom-layout(column, flex-start);
+    align-items: flex-end;
+    padding: 2%;
+    margin: 0 2%;
+    background-image: url("../images/download.jpg");
+    background-size: cover;
+    height: 600px;
+    @media @mobile {
+      // .custom-layout(column, flex-end);
+      align-items: flex-start;
+    }
+  
+
+    img {
+      width: 20%;
+      margin-bottom: 2%;
+      @media @mobile {
+        width: 30%;
+      }
+    }
+  }
 }
 
 .team {

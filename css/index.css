@@ -170,14 +170,13 @@ img {
   margin: 0 auto;
 }
 .header {
-  height: 50vh;
-  background-color: #0098b8;
+  background-color: #AB7ec4;
   text-align: center;
   padding: 2%;
   margin: 0 2%;
 }
-.header h1 {
-  padding: 2%;
+.header h2 {
+  padding: 1%;
 }
 .header img {
   margin: 1% 0;
@@ -185,7 +184,7 @@ img {
 .bodyDiv .mainContent {
   padding: 2%;
   margin: 0 2%;
-  background-color: #BFE6EC;
+  background-color: #BFE6ED;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -236,11 +235,37 @@ img {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: #AB7ec4;
 }
 .bodyDiv .snapshots img {
-  height: 40vh;
+  height: 50vh;
   width: auto;
   max-width: 100%;
+}
+.bodyDiv .download {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 2%;
+  margin: 0 2%;
+  background-image: url("../images/download.jpg");
+  background-size: cover;
+  height: 600px;
+}
+@media (max-width: 500px) {
+  .bodyDiv .download {
+    align-items: flex-start;
+  }
+}
+.bodyDiv .download img {
+  width: 20%;
+  margin-bottom: 2%;
+}
+@media (max-width: 500px) {
+  .bodyDiv .download img {
+    width: 30%;
+  }
 }
 .team {
   padding-top: 2%;
@@ -285,9 +310,31 @@ img {
   padding: 2%;
   margin: 0 2%;
   text-align: center;
-  background-color: #BFE6EC;
+  background-color: #AB7ec4;
 }
 .footer a {
   text-decoration: none;
   color: black;
+  font-size: 2.8rem;
+}
+.footer img {
+  width: 5%;
+  padding: 5px;
+}
+.footer .footerNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.footer .footerSocial {
+  padding: 20px 0;
+}
+.footer .footerSocial p {
+  font-family: 'Satisfy', cursive;
+  font-size: 2.4rem;
+  padding: 0;
+}
+.footer .copyright p {
+  font-size: 1.6rem;
 }

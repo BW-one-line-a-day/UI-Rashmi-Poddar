@@ -1,31 +1,114 @@
-.mainContent {
-  padding: 20px;
+.bodyDiv {
   
-
-  img {
-    width: 40%;
-    height: 40vh;
-    // object-fit:cover;
-    // object-position:50% 50%;
+  .mainContent { 
+    padding: 2%;
+    margin: 0 2%;
+    background-color: @secondary-color;
+    .custom-layout(row, space-between);
+    @media @mobile {
+      .custom-layout(column, space-between);
+    }
+    
+    div {
+      width: 40%;
+      @media @mobile {
+        width: 100%;
+      }
+    }
+  
+    img {
+      width: 50%;
+      height: 40vh;
+      object-fit: cover;
+      object-position:10% 10%;
+      @media @mobile {
+        width: 100%;
+        margin-bottom: 5%;
+      }
+    }
     
   }
-
-  p {
-    width: 40%;
+  
+  .inverseContent {
+    .custom-layout(row-reverse, space-between);
+    @media @mobile {
+      .custom-layout(column, space-between);
+    }
   }
 
-  .firstPara {
-    .custom-layout(row);
-    padding: 2% 0;
+  .snapshots {
+    padding: 2%;
+    margin: 0 2%;
+    .custom-layout(row, center);
+    flex-wrap: wrap;
+    background-color: @main-color;
+
+    img {
+      height: 50vh;
+      width: auto;
+      max-width: 100%;
+    }
   }
 
-  .secondPara {
-    .custom-layout(row-reverse);
-    padding: 2% 0;
-  }
+  .download {
+    .custom-layout(column, flex-start);
+    align-items: flex-end;
+    padding: 2%;
+    margin: 0 2%;
+    background-image: url("../images/download.jpg");
+    background-size: cover;
+    height: 600px;
+    @media @mobile {
+      // .custom-layout(column, flex-end);
+      align-items: flex-start;
+    }
+  
 
-  .thirdPara {
-    .custom-layout(row);
-    padding: 2% 0;
+    img {
+      width: 20%;
+      margin-bottom: 2%;
+      @media @mobile {
+        width: 30%;
+      }
+    }
   }
 }
+
+.team {
+  padding-top: 2%;
+  text-align: center;
+}
+
+.aboutTeam {
+  padding: 2%;
+  margin: 0 2%;
+  .custom-layout(row, space-between);
+  flex-wrap: wrap;
+  @media @mobile {
+    .custom-layout(column, space-between);
+  }
+  text-align: center;
+  div {
+    padding: 2%;
+    margin: 0 2%;
+    width: 45%;
+    &:first-child {
+      width: 100%;
+    }
+    @media @mobile {
+      width: 100%;
+      text-align: center;
+    }
+
+    img {
+      margin: 2% 0;
+      width: 30%;
+      border-radius: 50%;
+      
+    }
+    
+  }
+  
+}
+
+

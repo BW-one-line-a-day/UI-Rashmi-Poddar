@@ -1,3 +1,29 @@
+@keyframes move {
+  0% {
+    opacity: 0.2;
+    transform: rotate(30deg);
+  }
+  30% {
+    opacity: 0.4;
+    transform: rotate(90deg);
+  }
+  60% {
+    opacity: 0.8;
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+@keyframes moveOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
   v2.0 | 20110126
   License: none (public domain)
@@ -261,6 +287,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 @media (max-width: 500px) {
   .bodyDiv .snapshots .snapshotImages {
@@ -274,6 +301,8 @@ img {
   height: 50vh;
   width: auto;
   max-width: 100%;
+  animation-name: move;
+  animation-duration: 3s;
 }
 .bodyDiv .download {
   display: flex;
@@ -316,6 +345,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: #BFE6ED;
   text-align: center;
 }
 @media (max-width: 500px) {
@@ -345,8 +375,11 @@ img {
   border-radius: 50%;
 }
 .aboutTeam div img:hover {
-  opacity: 1;
-  cursor: pointer;
+  animation-name: moveOut;
+  animation-duration: 3s;
+}
+.aboutTeam div h3 {
+  font-family: 'Lato', sans-serif;
 }
 .footer {
   padding: 2%;
@@ -402,4 +435,12 @@ img {
   .footer .copyright p {
     font-size: 1rem;
   }
+}
+.aboutFooter a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+.aboutFooter .footerSocial {
+  padding: 0;
 }

@@ -71,7 +71,7 @@
 
     .snapshotImages {
       .custom-layout(row, space-evenly);
-      // flex-wrap: wrap;
+      flex-wrap: wrap;
       @media @mobile {
         .custom-layout(column-reverse, center);
         align-items: center;
@@ -81,6 +81,8 @@
         height: 50vh;
         width: auto;
         max-width: 100%;
+        .animation(move, 3s);
+        
       }
 
     }
@@ -125,11 +127,13 @@
   margin: 0 2%;
   .custom-layout(row, space-between);
   flex-wrap: wrap;
+  background-color: @secondary-color;
   @media @mobile {
     .custom-layout(column, space-between);
   }
   text-align: center;
   div {
+    // position: relative;
     padding: 2%;
     margin: 0 2%;
     width: 45%;
@@ -145,10 +149,24 @@
       margin: 2% 0;
       width: 30%;
       border-radius: 50%;
+      // position: absolute;
+      // transition: opacity 1s ease-in-out;
+
+      // #bottom {
+      //   &:hover {
+      //     opacity: 1;
+      //     cursor: pointer;
+      //   }
+      // }
+
       &:hover {
-        opacity: 1;
-        cursor: pointer;
+        .animation(moveOut, 3s);
       }
+      
+    }
+
+    h3 {
+      font-family: @secondary-font;
     }
     
   }

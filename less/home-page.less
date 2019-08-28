@@ -28,7 +28,31 @@
     }
     
   }
-  
+
+  .productTagline {
+    padding: 2%;
+    margin: 0 2%;
+    height: 500px;
+    background-image: url("../images/tagline.jpg");
+    background-size: cover;
+    text-align: center;
+
+    h1 {
+      padding: 2%;
+      @media @mobile {
+        font-size: 3.5rem;
+        margin: 2% 0;
+      }
+    }
+
+    h2 {
+      @media @mobile {
+        font-size: 2.5rem;
+      }
+    }
+    
+
+  }
   .inverseContent {
     .custom-layout(row-reverse, space-between);
     @media @mobile {
@@ -39,15 +63,28 @@
   .snapshots {
     padding: 2%;
     margin: 0 2%;
-    .custom-layout(row, center);
-    flex-wrap: wrap;
-    background-color: @main-color;
-
-    img {
-      height: 50vh;
-      width: auto;
-      max-width: 100%;
+    
+    h3 {
+      text-align: center;
+      // color: #80C9DB;
     }
+
+    .snapshotImages {
+      .custom-layout(row, space-evenly);
+      // flex-wrap: wrap;
+      @media @mobile {
+        .custom-layout(column-reverse, center);
+        align-items: center;
+      }
+
+      img {
+        height: 50vh;
+        width: auto;
+        max-width: 100%;
+      }
+
+    }
+
   }
 
   .download {
@@ -59,7 +96,6 @@
     background-size: cover;
     height: 600px;
     @media @mobile {
-      // .custom-layout(column, flex-end);
       align-items: flex-start;
     }
   
@@ -76,7 +112,12 @@
 
 .team {
   padding-top: 2%;
+  margin: 0 2%;
   text-align: center;
+  background-image: url("../images/team.jpg");
+  background-size: cover;
+  height: 400px;
+  color: @white;
 }
 
 .aboutTeam {
@@ -104,7 +145,10 @@
       margin: 2% 0;
       width: 30%;
       border-radius: 50%;
-      
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
     }
     
   }

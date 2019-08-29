@@ -28,7 +28,31 @@
     }
     
   }
-  
+
+  .productTagline {
+    padding: 2%;
+    margin: 0 2%;
+    height: 500px;
+    background-image: url("../images/tagline.jpg");
+    background-size: cover;
+    text-align: center;
+
+    h1 {
+      padding: 2%;
+      @media @mobile {
+        font-size: 3.5rem;
+        margin: 2% 0;
+      }
+    }
+
+    h2 {
+      @media @mobile {
+        font-size: 2.5rem;
+      }
+    }
+    
+
+  }
   .inverseContent {
     .custom-layout(row-reverse, space-between);
     @media @mobile {
@@ -39,14 +63,47 @@
   .snapshots {
     padding: 2%;
     margin: 0 2%;
-    .custom-layout(row, center);
-    flex-wrap: wrap;
-    background-color: @main-color;
+    
+    h3 {
+      text-align: center;
+      // color: #80C9DB;
+    }
 
-    img {
-      height: 50vh;
-      width: auto;
-      max-width: 100%;
+    .snapshotImages {
+      .custom-layout(row, space-evenly);
+      flex-wrap: wrap;
+      @media @mobile {
+        .custom-layout(column-reverse, center);
+        align-items: center;
+      }
+
+      div {
+        position: relative;
+        height: 50vh;
+        width: 50%;
+
+        img.top{
+          position: absolute;
+          left: 0;
+          height: 100%;
+          animation-name: fadeOutIn;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-duration: 2.5s;
+          animation-direction: alternate;
+        }
+
+        img.bottom{
+          position: absolute;
+          left: 0;
+          height: 100%;
+          animation-name: fadeInOut;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-duration: 2.5s;
+          animation-direction: alternate;
+        }
+      }
     }
   }
 
@@ -59,7 +116,6 @@
     background-size: cover;
     height: 600px;
     @media @mobile {
-      // .custom-layout(column, flex-end);
       align-items: flex-start;
     }
   
@@ -76,7 +132,25 @@
 
 .team {
   padding-top: 2%;
+  margin: 0 2%;
   text-align: center;
+  background-image: url("../images/team.jpg");
+  background-size: cover;
+  height: 400px;
+  color: @white;
+  .custom-layout(column, center);
+  h1 {
+    padding: 1% 0;
+    @media @mobile {
+      font-size: 4rem;
+    }
+  }
+  h2 {
+    @media @mobile {
+      font-size: 1.8rem;
+    }
+  }
+
 }
 
 .aboutTeam {
@@ -84,6 +158,7 @@
   margin: 0 2%;
   .custom-layout(row, space-between);
   flex-wrap: wrap;
+  background-color: @secondary-color;
   @media @mobile {
     .custom-layout(column, space-between);
   }
@@ -99,12 +174,24 @@
       width: 100%;
       text-align: center;
     }
-
-    img {
+    
+    img{
       margin: 2% 0;
       width: 30%;
       border-radius: 50%;
-      
+
+      &:hover {
+        .animation(moveOut, 2s);
+      }
+  
+    }
+
+    h3 {
+      font-family: @secondary-font;
+    }
+
+    .lead img {
+      width: 20%;
     }
     
   }

@@ -138,6 +138,19 @@
   background-size: cover;
   height: 400px;
   color: @white;
+  .custom-layout(column, center);
+  h1 {
+    padding: 1% 0;
+    @media @mobile {
+      font-size: 4rem;
+    }
+  }
+  h2 {
+    @media @mobile {
+      font-size: 1.8rem;
+    }
+  }
+
 }
 
 .aboutTeam {
@@ -151,7 +164,6 @@
   }
   text-align: center;
   div {
-    // position: relative;
     padding: 2%;
     margin: 0 2%;
     width: 45%;
@@ -162,29 +174,24 @@
       width: 100%;
       text-align: center;
     }
-
-    img {
+    
+    img{
       margin: 2% 0;
       width: 30%;
       border-radius: 50%;
-      // position: absolute;
-      // transition: opacity 1s ease-in-out;
-
-      // #bottom {
-      //   &:hover {
-      //     opacity: 1;
-      //     cursor: pointer;
-      //   }
-      // }
 
       &:hover {
-        .animation(moveOut, 3s);
+        .animation(moveOut, 2s);
       }
-      
+  
     }
 
     h3 {
       font-family: @secondary-font;
+    }
+
+    .lead img {
+      width: 20%;
     }
     
   }

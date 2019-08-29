@@ -383,6 +383,22 @@ img {
   background-size: cover;
   height: 400px;
   color: #EFEEF5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.team h1 {
+  padding: 1% 0;
+}
+@media (max-width: 500px) {
+  .team h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 500px) {
+  .team h2 {
+    font-size: 1.8rem;
+  }
 }
 .aboutTeam {
   padding: 2%;
@@ -422,10 +438,13 @@ img {
 }
 .aboutTeam div img:hover {
   animation-name: moveOut;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 .aboutTeam div h3 {
   font-family: 'Lato', sans-serif;
+}
+.aboutTeam div .lead img {
+  width: 20%;
 }
 .footer {
   padding: 2%;
